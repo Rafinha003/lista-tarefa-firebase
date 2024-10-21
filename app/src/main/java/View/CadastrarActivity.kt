@@ -27,6 +27,7 @@ class CadastrarActivity : AppCompatActivity() {
                         Toast.LENGTH_LONG).show()
                     finish()
                 } else {
+                    //length_long obriga o password ter um tamanho maior
                     Toast.makeText(this, "Erro ao criar usuário: " +
                             erro.toString(), Toast.LENGTH_LONG).show()
                 }

@@ -23,16 +23,11 @@ class EsqueceuSenhaActivity : AppCompatActivity() {
             ctrl = AutenticationController()
             ctrl.esqueceuSenha(email) { sucesso, erro ->
                 if (sucesso) {
-                    Toast.makeText(this,"Um e-mail de redefinição de senha foi enviado para " +
-                            "o seu endereço de e-mail.",
-                        Toast.LENGTH_LONG).show()
+                    Toast.makeText(this,"Um e-mail de redefinição de senha foi enviado para o seu endereço de e-mail.", Toast.LENGTH_LONG).show()
                     finish()
 
                 } else {
-                    Toast.makeText(this,
-                        "Falha ao enviar e-mail de redefinição de senha. " +
-                                "Verifique se o endereço de e-mail é válido.",
-                        Toast.LENGTH_LONG).show()
+                    Toast.makeText(this, "Falha ao enviar e-mail de redefinição de senha. Verifique se o endereço de e-mail é válido.", Toast.LENGTH_LONG).show()
                 }
             }
 

@@ -15,7 +15,6 @@ class AutenticationController {
                 }
             }
     }
-
     fun criarUsuario(email: String, password: String, onResult: (Boolean, String?) -> Unit) {
         val firebaseAuth = FirebaseAuth.getInstance()
         firebaseAuth.createUserWithEmailAndPassword(email, password)
@@ -28,10 +27,8 @@ class AutenticationController {
                 }
             }
     }
-
     fun esqueceuSenha(email: String, onResult: (Boolean, String?) -> Unit) {
         val firebaseAuth = FirebaseAuth.getInstance()
-
         firebaseAuth.sendPasswordResetEmail(email)
             .addOnCompleteListener{ task ->
                 if (task.isSuccessful) {
